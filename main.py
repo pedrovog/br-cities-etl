@@ -1,13 +1,15 @@
 import pandas as pd
 import pickle
+from br_cities_etl import save_obj, load_obj
 
-def save_obj(obj, filename):
-    with open(filename, 'wb') as f:
-        pickle.dump(obj, f, pickle.HIGHEST_PROTOCOL)
 
-def load_obj(filename):
-    with open(filename, 'rb') as f:
-        return pickle.load(f)
+# def save_obj(obj, filename):
+#     with open(filename, 'wb') as f:
+#         pickle.dump(obj, f, pickle.HIGHEST_PROTOCOL)
+
+# def load_obj(filename):
+#     with open(filename, 'rb') as f:
+#         return pickle.load(f)
 
 
 if __name__ == "__main__":
