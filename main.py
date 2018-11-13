@@ -1,16 +1,5 @@
 import pandas as pd
-import pickle
-from br_cities_etl import save_obj, load_obj
-
-
-# def save_obj(obj, filename):
-#     with open(filename, 'wb') as f:
-#         pickle.dump(obj, f, pickle.HIGHEST_PROTOCOL)
-
-# def load_obj(filename):
-#     with open(filename, 'rb') as f:
-#         return pickle.load(f)
-
+from br_cities_etl import save_obj, load_obj, save_data
 
 if __name__ == "__main__":
     mun_file_path = 'datasets/cities.csv'
@@ -50,4 +39,4 @@ if __name__ == "__main__":
     save_obj(uf_mun_dict, 'datasets/result/ufmun.pkl')
 
     d = load_obj('datasets/result/ufmun.pkl')
-    print(d)
+    save_data(d)
